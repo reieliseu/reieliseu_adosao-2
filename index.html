@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Adoção de Animais</title>
+    <style>
+        
+        header {
+            background-color: #007bff;
+            color: rgb(185, 135, 135);
+            text-align: center;
+            padding: 10px 0;
+        }
+        h1 {
+            margin: 0;
+        }
+        section {
+            margin: 20px;
+        }
+        .animal-card {
+            background-color: rgb(214, 177, 177);
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .animal-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .animal-card h3 {
+            color: #333;
+        }
+        .animal-card p {
+            color: #666;
+        }
+        footer {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: auto;
+        }
+        .form-container input, .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .form-container button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-container button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Sistema de Adoção de Animais</h1>
+    <p>Encontre um amigo para a vida toda</p>
+</header>
+
+<section>
+    <h2>Animais Disponíveis para Adoção</h2>
+
+    <div class="animal-card">
+        <img src="https://via.placeholder.com/300x200" alt="Cachorro disponível para adoção">
+        <h3>Cachorro - Rex</h3>
+        <p>Idade: 2 anos | Raça: Poodle | Sexo: Macho</p>
+        <p>Rex é um cachorro muito brincalhão e amigável, adora correr e interagir com pessoas.</p>
+    </div>
+
+    <div class="animal-card">
+        <img src="https://via.placeholder.com/300x200" alt="Gato disponível para adoção">
+        <h3>Gato - Luna</h3>
+        <p>Idade: 1 ano | Raça: Siamesa | Sexo: Fêmea</p>
+        <p>Luna é muito carinhosa e tranquila, adora um colo e se dá bem com outros gatos.</p>
+    </div>
+    
+    <!-- Adicione mais cards de animais conforme necessário -->
+</section>
+
+<section>
+    <h2>Entre em Contato para Adoção</h2>
+
+    <div class="form-container">
+        <form action="/enviar-contato" method="POST">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+<p>&copy; Sistema de Adoção de Animais. eliseu_serrano.</p>
+</footer>
+
+<h1>eu sou o homem de ferro</h1>
+
+</body>
+</html>
