@@ -1,0 +1,38 @@
+[
+    {
+        "nome_adotante": "Maria Silva",
+        "idade_adotante": 30,
+        "nome_adotado": "Rex",
+        "idade_adotado": 3,
+        "tipo_animal": "cão",
+        "status_adocao": "Aprovada",
+        "prioridade": false
+    },
+    {
+        "nome_adotante": "Carlos Oliveira",
+        "idade_adotante": 17,
+        "nome_adotado": "Luna",
+        "idade_adotado": 2,
+        "tipo_animal": "cão",
+        "status_adocao": "Pendente",
+        "prioridade": true
+    },
+    {
+        "nome_adotante": "Ana Souza",
+        "idade_adotante": 25,
+        "nome_adotado": "Tom",
+        "idade_adotado": 0,
+        "tipo_animal": "gato",
+        "status_adocao": "Aprovada",
+        "prioridade": false
+    },
+    {
+        "nome_adotante": "José Almeida",
+        "idade_adotante": 35,
+        "nome_adotado": "Bella",
+        "idade_adotado": 4,
+        "tipo_animal": "cão",
+        "status_adocao": "Rejeitada",
+        "prioridade": true
+    }
+]
