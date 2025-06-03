@@ -1,55 +1,139 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Adoção de Animais</title>
-    <link rel="stylesheet" href="style.css">
-   
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Adoção de Animais</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<header>
+  <header>
     <h1>Sistema de Adoção de Animais</h1>
-    <p>Encontre um amigo para a vida toda</p>
-</header>
+    <p></p>
+  </header>
+  <main>
+    <section>
+      <h2>Animais Disponíveis</h2>
+      <div class="animal-card">
+        <h3>Rex (2 anos, Labrador)<h3> 
+        <p>Brincalhão e amigável</p> 
 
-<section>
-    <h2>Animais Disponíveis para Adoção</h2>
-
-    <div class="animal-card">
-        <img src="https://via.placeholder.com/300x200" alt="Cachorro disponível para adoção">
-        <h3>Cachorro - Rex</h3>
-        <p>Idade: 2 anos | Raça: labrador | Sexo: Macho</p>
-        <p>Rex é um cachorro muito brincalhão e amigável, adora correr e interagir com pessoas.</p>
-    </div>
-
-    <div class="animal-card">
-        <img src="https://via.placeholder.com/300x200" alt="Gato disponível para adoção">
-        <h3>Gato - Luna</h3>
-        <p>Idade: 1 ano | Raça: Siamesa | Sexo: Fêmea</p>
-        <p>Luna é muito carinhosa e tranquila, adora um colo e se dá bem com outros gatos.</p>
-    </div>
+      </div>
+      <div class="animal-card"> 
+        <h3>Luna (1 ano, Siamesa)</h3> 
+        <p>Carinhosa e tranquila.</p>
+      </div>
+      </div>
+    </section>
+    <section>
     
-    <!-- Adicione mais cards de animais conforme necessário -->
-</section>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro Interativo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #c79763;
+      margin: 20px;
+    }
+    .form-container {
+      background-color: #d99500; /* amarelo forte */
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      width: 90%;
+      max-width: 400px;
+    }
+    .form-container input {
+      width: 100%;
+      padding: 8px;
+      margin: 5px 0;
+      border: 1px solid #bd8430;
+      border-radius: 4px;
+    }
+    .form-container button {
+      padding: 10px;
+      background: #28a745;
+      color: #7f7855;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    th, td {
+      padding: 8px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+    th {
+      background: #007bff;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Cadastro de dados</h2>
+    <input type="text" id="nome" placeholder="Nome" />
+    <input type="text" id="telefone" placeholder="Telefone" />
+    <input type="email" id="email" placeholder="E-mail" />
+    <button id="addBtn">Adicionar</button>
+  </div>
 
-<section>
-    <h2>Entre em Contato para Adoção</h2>
+  <table id="cadastroTable">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Telefone</th>
+        <th>E-mail</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Linhas serão inseridas aqui -->
+    </tbody>
+  </table>
 
-    <div class="form-container">
-        <form action="/enviar-contato" method="POST">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required>
+  <script>
+    const addBtn = document.getElementById('addBtn');
+    const tableBody = document.querySelector('#cadastroTable tbody');
 
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="mensagem">Mensagem:</label>
-            <textarea id="mensagem" name="mensagem" rows="4" required></textarea>  
-            <button type="submit">Enviar</button>
-        </form>
-    </div>
-</section>
-<footer>
+    addBtn.addEventListener('click', () => {
+      const nome = document.getElementById('nome').value.trim();
+      const telefone = document.getElementById('telefone').value.trim();
+      const email = document.getElementById('email').value.trim();
+      if (!nome || !telefone || !email) {
+        alert('Preencha todos os campos.');
+        return;
+      }
+      const row = document.createElement('tr');
+      row.innerHTML = `
+        <td>${nome}</td>
+        <td>${telefone}</td>
+        <td>${email}</td>
+        <td><button class="deleteBtn">Excluir</button></td>
+      `;
+      tableBody.appendChild(row);
+
+      // Limpa campos
+      document.getElementById('nome').value = '';
+      document.getElementById('telefone').value = '';
+      document.getElementById('email').value = '';
+
+      // Ação de excluir
+      row.querySelector('.deleteBtn').addEventListener('click', () => {
+        tableBody.removeChild(row);
+      });
+    });
+  </script>
 </body>
 </html>
